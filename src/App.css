@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+/* #components-layout-demo-top-side-2 .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-row-rtl #components-layout-demo-top-side-2 .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+} */
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "NexaRegular";
+  src: local("NexaRegular"),
+    url("./assets/fonts/nexa/Nexa Regular.otf") format("opentype");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+
+* {
+  font-family: "NexaRegular";
+}
+
+.header {
+  background: #ffffff !important;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.08) !important;
+  z-index: 100;
+}
+
+.site-layout-background {
+  background: #305296eb !important;
+  z-index: 100;
+}
+
+.menu-items {
+  background: unset !important;
+  margin-top: 24px !important;
+}
+
+.ant-menu.ant-menu-inline-collapsed .ant-menu-item-icon {
+  margin-top: 8px !important;
+  padding-right: 9px;
+}
+
+.ant-menu-item-selected {
+  background: #fff !important;
+}
+
+.ant-menu-title-content {
+  font-weight: 500 !important;
+}
+
+.ant-menu-item .ant-menu-title-content {
+  color: #fff !important;
+}
+
+.ant-menu-item-selected .ant-menu-title-content {
+  color: #305296eb !important;
+}
+
+.ant-layout-sider-children {
+  padding: 20px;
+}
+
+.ant-menu-item {
+  margin-block: 10px !important;
+}
+
+.ant-layout-sider-collapsed .ant-layout-sider-children {
+  padding: unset !important;
+}
+
+.card-cuaca {
+  margin-top: 10vh;
+}
+
+.card-cuaca .card-cuaca__header p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #c9e5ff;
+}
+
+.card-cuaca__body {
+  background: #c9e5ff;
+  box-shadow: 0px 34px 101px rgba(9, 0, 63, 0.38);
+  border-radius: 20px;
+}
+
+.card-cuaca__body__content {
+  padding: 20px;
+}
+
+.sky-icon {
+  width: 140px;
+  height: 140px;
+  margin: -28px 0px 0px -28px;
+}
+
+.suhu-text h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(
+    180deg,
+    #296399 54.68%,
+    rgba(255, 255, 255, 0) 187.46%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.suhu-text span {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-transform: capitalize;
+  color: #658caf;
+}
+
+.card-cuaca__body__content__detail {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20px;
+  padding-bottom: 20px;
+}
+
+.card-cuaca__body__content__detail__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-cuaca__body__content__detail__item {
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-cuaca__body__content__detail__item img {
+  height: 20px;
+}
+
+.footer-nav {
+  margin-top: 8vh;
+}
+
+.back-icon {
+  width: 56px !important;
+  height: 56px !important;
+  margin-right: 10px;
+  background: #c9e5ff !important;
 }

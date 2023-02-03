@@ -20,6 +20,11 @@ body {
   src: local("NexaRegular"),
     url("./assets/fonts/nexa/Nexa Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "NexaBold";
+  src: local("NexaBold"),
+    url("./assets/fonts/nexa/Nexa Bold.otf") format("opentype");
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 
@@ -31,6 +36,10 @@ body {
   background: #ffffff !important;
   box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.08) !important;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 200px;
 }
 
 .site-layout-background {
@@ -146,9 +155,285 @@ body {
   margin-top: 8vh;
 }
 
+.card-cuaca__body__content__detail__item span {
+  font-size: 14px;
+  color: #668caf !important;
+}
+
 .back-icon {
   width: 56px !important;
   height: 56px !important;
   margin-right: 10px;
   background: #c9e5ff !important;
+}
+
+.logo-text {
+  font-family: "NexaBold";
+  font-weight: 700 !important;
+  letter-spacing: 0.21em;
+
+  color: #43496b !important;
+
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.ant-layout-header {
+  padding-inline: 20px !important;
+}
+
+.avatar-dropdown__container {
+  cursor: pointer;
+}
+
+.avatar-dropdown__container:hover {
+  background: #b7c8d688 !important;
+  border-radius: 10px;
+}
+
+.avatar-dropdown__content-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+}
+
+.avatar-dropdown__content-text h4 {
+  font-family: "NexaRegular";
+  font-weight: 500;
+
+  color: rgba(57, 88, 151, 1);
+  font-size: 20px;
+  margin: 0;
+}
+
+.avatar-dropdown__content-text p {
+  font-family: "NexaRegular";
+  font-weight: 100;
+
+  color: rgba(57, 88, 151, 1);
+  margin: 0;
+  font-size: small;
+}
+
+.ant-layout-header {
+  line-height: unset !important;
+}
+
+.header-content {
+  text-align: left;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.header-content h1 {
+  font-family: "NexaRegular";
+  font-weight: 500 !important;
+  letter-spacing: 0.21em;
+
+  color: #43496b !important;
+}
+
+.card-box__vessel {
+  background: rgba(64, 96, 158, 1);
+  color: #fff;
+  border-radius: 25px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  /* justify-content: center; */
+  cursor: pointer;
+  padding: 0 40px;
+}
+
+.card-box__vessel:hover {
+  background: rgba(64, 96, 158, 0.8);
+}
+
+.name__vessel {
+  font-family: "NexaRegular";
+  font-weight: 500 !important;
+  letter-spacing: 0.21em;
+
+  color: #fff !important;
+  font-size: 18px;
+}
+
+.content__container {
+  margin-top: 10vh;
+}
+
+.content__container__subpage {
+  margin-top: 5vh;
+}
+
+.card-title__sub-vessel {
+  background: rgba(64, 96, 158, 1);
+  color: #fff;
+  border-radius: 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  /* justify-content: center; */
+  cursor: pointer;
+  padding: 0 20px;
+  width: max-content;
+  margin-left: 60px;
+}
+
+.card-title__sub-vessel span {
+  font-family: "NexaRegular";
+  font-weight: 500 !important;
+  letter-spacing: 0.21em;
+
+  color: #fff !important;
+  font-size: 14px;
+}
+
+.ant-input-lg {
+  border: 4px solid #40609e;
+  border-radius: 15px;
+  color: #40609e;
+  font-family: "NexaRegular";
+  text-align: center;
+  /* height: 50px; */
+  font-size: 20px;
+}
+
+.ant-form-item-label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  /* font-size: 26px; */
+  /* line-height: 31px; */
+  text-transform: capitalize;
+}
+.ant-form-item-label label {
+  font-size: 18px !important;
+  color: #36599a !important;
+}
+
+.ant-picker-large {
+  border: 4px solid #40609e;
+  border-radius: 15px;
+  font-family: "NexaRegular";
+  text-align: center;
+  /* height: 50px; */
+  width: 100%;
+}
+
+.ant-picker-input input {
+  text-align: center;
+  font-size: 20px !important;
+  color: #40609e !important;
+}
+
+.subpage__form {
+  padding-right: 44px !important;
+}
+
+.blue-left {
+  width: 100%;
+}
+
+.blue-left > .ant-input-number-group > .ant-input-number-group-addon {
+  background: rgba(64, 96, 158, 1) !important;
+  border: 4px solid #40609e !important;
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+  color: #fff !important;
+  font-family: "NexaRegular" !important;
+  text-align: center !important;
+  /* height: 50px; */
+  font-size: 24px !important;
+}
+
+.blue-left > .ant-input-number-group > .ant-input-number {
+  border: 4px solid #40609e !important;
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+  font-family: "NexaRegular" !important;
+  text-align: center !important;
+  height: 52px;
+  overflow: hidden;
+}
+
+.blue-left
+  > .ant-input-number-group
+  > .ant-input-number
+  > .ant-input-number-input-wrap
+  > input {
+  font-size: 20px !important;
+
+  color: #40609e !important;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.gray-left {
+  width: 100%;
+}
+
+.gray-left > .ant-input-number-group > .ant-input-number-group-addon {
+  background: rgba(228, 228, 231, 1) !important;
+  border: 4px solid #40609e !important;
+  border-right: unset !important;
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+  color: #40609e !important;
+  font-family: "NexaRegular" !important;
+  text-align: center !important;
+  height: 51px;
+  font-size: 24px !important;
+  text-align: center;
+}
+
+.gray-left > .ant-input-number-group > .ant-input-number {
+  border: 4px solid #40609e !important;
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+  font-family: "NexaRegular" !important;
+  text-align: center !important;
+  height: 50px;
+  overflow: hidden;
+  padding-top: 4px;
+}
+
+.gray-left
+  > .ant-input-number-group
+  > .ant-input-number
+  > .ant-input-number-input-wrap
+  > input {
+  font-size: 20px !important;
+  text-align: center;
+  color: #40609e !important;
+}
+
+@media (max-width: 932px) {
+  .header {
+    gap: 0;
+  }
+  .logo-text {
+    /* margin-top: 10px; */
+    font-size: 24px !important;
+  }
+  .ant-layout-header {
+    padding-inline: 10px !important;
+  }
+
+  .card-title__sub-vessel {
+    margin-left: 0px;
+  }
+
+  .subpage__form {
+    padding-right: 5px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo-text {
+    display: none;
+  }
 }

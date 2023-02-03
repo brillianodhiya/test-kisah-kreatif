@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Breadcrumb, Layout, Menu, theme, Button } from "antd";
+import { Layout, Menu, Button, Typography, Skeleton, Result } from "antd";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 import BurgerIcon from "./components/Icon/BurgerIcon";
 import DasboardIcon from "./components/Icon/DashboardIcon";
 import CalendarIcon from "./components/Icon/CalendarIcon";
@@ -11,13 +13,17 @@ import SettingsIcon from "./components/Icon/SettingsIcon";
 import UsersIcon from "./components/Icon/UsersIcon";
 import CardSky from "./components/Card/CardSky";
 import BackIcon from "./components/Icon/BackIcon";
+import AvatarDropdown from "./components/RightMenu/AvatarDropdown";
+
+import VesselActivity from "./pages/VesselActivity";
+const SubPageVesselActivity = React.lazy(() =>
+  import("./pages/SubPageVesselActivity")
+);
 
 const { Header, Content, Sider } = Layout;
 
 const App = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  const navigate = useNavigate();
   const [collapse, setCollapse] = React.useState(false);
 
   return (
@@ -26,6 +32,15 @@ const App = () => {
         <Button type="text" onClick={() => setCollapse((v) => !v)}>
           <BurgerIcon />
         </Button>
+        <Typography.Title
+          style={{
+            margin: 0,
+          }}
+          className="logo-text"
+        >
+          LOGIN'S
+        </Typography.Title>
+        <AvatarDropdown />
       </Header>
       <Layout>
         <Sider
@@ -88,10 +103,14 @@ const App = () => {
 
           <div className="footer-nav">
             <Button
+              onClick={() => navigate(-1)}
               icon={<BackIcon />}
               shape="circle"
               size="large"
               className="back-icon"
+              style={{
+                marginLeft: collapse ? "6px" : undefined,
+              }}
             />
           </div>
         </Sider>
@@ -101,24 +120,29 @@ const App = () => {
             background: "#fff",
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: "16px 0",
-            }}
-          >
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
           <Content
             style={{
               padding: 24,
               margin: 0,
               minHeight: 280,
-              background: colorBgContainer,
             }}
           >
-            Content
+            <Routes>
+              <Route
+                index
+                element={<VesselActivity />}
+                errorElement={<Result status={"500"} />}
+              />
+              <Route
+                path="/sub"
+                element={
+                  <React.Suspense fallback={<Skeleton active />}>
+                    <SubPageVesselActivity />
+                  </React.Suspense>
+                }
+                errorElement={<Result status={"500"} />}
+              />
+            </Routes>
           </Content>
         </Layout>
       </Layout>

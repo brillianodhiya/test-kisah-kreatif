@@ -38,17 +38,23 @@ const CardSky = () => {
           <div className="card-cuaca__body__content__detail">
             <div className="card-cuaca__body__content__detail__item">
               <img className="icon" alt="icon1" src={Wind} />
-              <Typography.Text style={{ margin: 0 }}>16 km/h</Typography.Text>
+              <Typography.Text style={{ margin: "8px 0px 0px 0px" }}>
+                16 km/h
+              </Typography.Text>
             </div>
             <div className="card-cuaca__body__content__detail__item">
               <img className="icon" alt="icon2" src={Cloud} />
 
-              <Typography.Text style={{ margin: 0 }}>83 %</Typography.Text>
+              <Typography.Text style={{ margin: "8px 0px 0px 0px" }}>
+                83 %
+              </Typography.Text>
             </div>
             <div className="card-cuaca__body__content__detail__item">
               <img className="icon" alt="icon3" src={Vector} />
 
-              <Typography.Text style={{ margin: 0 }}>2 of 10</Typography.Text>
+              <Typography.Text style={{ margin: "8px 0px 0px 0px" }}>
+                2 of 10
+              </Typography.Text>
             </div>
           </div>
         </div>
